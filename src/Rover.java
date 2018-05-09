@@ -1,9 +1,7 @@
 
 public class Rover {
-	private static final String[][] String = null;
 	public int x = 0; int y = 0;
 	public String positionFacing = "N";
-	// 0 = N, 1, 1 = S, 2 = E e 3 = W
 
 	public Rover(int posX, int posY, String face) {
 		this.x = posX;
@@ -14,7 +12,7 @@ public class Rover {
 	public Rover() {
 
 	}
-
+	// Inicializa as variáveis conforme as entradas informadas pelo usuário.
 	public void setPosicao(int posX, int posY, String face) {
 		this.x = posX;
 		this.y = posY;
@@ -28,6 +26,7 @@ public class Rover {
 			processa(command);
 		}
 	}
+	
 	// Recebe o valor do método processa e move o rover conforme sua orientação.
 	private void move(Character command) {		
 		switch (positionFacing) {
@@ -67,7 +66,7 @@ public class Rover {
 				positionFacing = "N";
 				break;
 			}
-		}else if(command=='R'){
+		} else if(command=='R'){
 			switch (positionFacing) {
 			case "N":
 				positionFacing = "E";
