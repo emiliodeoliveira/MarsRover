@@ -26,25 +26,21 @@ public class Rover {
 			processa(command);
 		}
 	}
-	
-	// Recebe o valor do método processa e move o rover conforme sua orientação.
+
+	// Recebe o valor do método processa() e move o rover conforme sua orientação.
 	private void move(Character command) {		
 		switch (positionFacing) {
-		case "N":
-			x++;
+		case "N":			
 			y++;
 			break;
 		case "W":
-			x++;
-			y--;
+			x--;			
 			break;
-		case "S":
-			x--;
+		case "S":			
 			y--;
 			break;
 		case "E":
-			x--;
-			y++;
+			x++;			
 			break;
 		}
 	}
@@ -81,9 +77,7 @@ public class Rover {
 				positionFacing = "S";
 				break;
 			}
-		}
-
-		else if(command=='M') {
+		} else if(command=='M') {
 			move(command);
 		}
 	}
